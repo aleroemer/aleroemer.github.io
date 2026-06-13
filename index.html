@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Alejandro Roemer — Political Science, University of Chicago</title>
+<meta name="description" content="PhD student in Political Science at the University of Chicago, studying criminal violence, political reform, and the use of force in Latin America." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1' y='1' width='30' height='30' fill='%23fff' stroke='%2315161B' stroke-width='2.5'/%3E%3Cline x1='16' y1='2' x2='16' y2='30' stroke='%2315161B' stroke-width='1.5'/%3E%3Cline x1='2' y1='18' x2='16' y2='18' stroke='%2315161B' stroke-width='1.5'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --page:#E9F1F8;
+    --page2:#FCF5EC;
+    --dot:#D3E1EE;
+    --paper:#FFFCF6;
+    --panel:#FFFFFF;
+    --ink:#24283C;
+    --ink-soft:#565A70;
+    --ink-faint:#9094A8;
+    --line:#E7E4DD;
+    --accent:#D97B72;
+
+    --serif:"Fraunces", Georgia, serif;
+    --sans:"Hanken Grotesk", system-ui, sans-serif;
+    --mono:"Space Mono", ui-monospace, monospace;
+    --maxw:1100px;
+    --pad:clamp(14px, 3.5vw, 40px);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;color:var(--ink);
+    background-color:#CFE6F4;
+    font-family:var(--sans);font-size:17px;line-height:1.65;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
+    background-image:
+      radial-gradient(270px 150px at 15% 15%, rgba(255,255,255,0.95), rgba(255,255,255,0)),
+      radial-gradient(230px 120px at 33% 10%, rgba(255,255,255,0.85), rgba(255,255,255,0)),
+      radial-gradient(300px 150px at 72% 8%, rgba(255,255,255,0.90), rgba(255,255,255,0)),
+      radial-gradient(250px 130px at 90% 19%, rgba(255,255,255,0.75), rgba(255,255,255,0)),
+      radial-gradient(210px 115px at 54% 25%, rgba(255,255,255,0.60), rgba(255,255,255,0)),
+      repeating-conic-gradient(from 0deg at 99% -2%, rgba(255,246,221,0.09) 0deg 2.5deg, rgba(255,246,221,0) 2.5deg 9deg),
+      radial-gradient(440px 340px at 100% -4%, rgba(255,243,212,0.92), rgba(255,243,212,0)),
+      linear-gradient(180deg, #ABD6EF 0%, #CDE6F3 36%, #E9F1EC 64%, #FBF3E6 100%);
+  }
+  body::after{
+    content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+    background-image:radial-gradient(rgba(86,106,138,0.15) 1px, transparent 1.5px);
+    background-size:6px 6px;
+  }
+  a{color:var(--ink);text-decoration:none;}
+  a:hover{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1.5px;text-decoration-color:var(--accent);}
+  :focus-visible{outline:2.5px solid var(--accent);outline-offset:2px;}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;letter-spacing:-0.01em;}
+
+  /* manga caption box */
+  .cap{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink);background:var(--paper);border:1.5px solid var(--ink);padding:4px 11px;}
+  .cap .dot{color:var(--accent);}
+
+  /* panels */
+  .panel{background:var(--panel);border:2.5px solid var(--ink);--pp:clamp(24px,4vw,44px);padding:var(--pp);position:relative;}
+  .frame{background:var(--panel);border:2.5px solid var(--ink);position:relative;overflow:hidden;}
+  .band{margin:calc(var(--pp)*-1) calc(var(--pp)*-1) var(--pp);height:clamp(120px,17vw,165px);border-bottom:2.5px solid var(--ink);overflow:hidden;}
+  .band img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1) sepia(0.12) contrast(1.03);}
+
+  nav{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:2.5px solid var(--ink);}
+  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:13px var(--pad);display:flex;align-items:center;justify-content:space-between;gap:20px;}
+  .brand{font-family:var(--serif);font-weight:600;font-size:19px;letter-spacing:-0.01em;}
+  .nav-links{display:flex;gap:24px;font-family:var(--mono);font-size:13px;}
+  .nav-links a{color:var(--ink-soft);}
+  .nav-links a:hover{color:var(--ink);text-decoration:none;}
+
+  main{max-width:var(--maxw);margin:0 auto;padding:clamp(18px,3vw,30px) var(--pad) 0;display:flex;flex-direction:column;gap:clamp(18px,3vw,30px);}
+
+  /* hero */
+  .hero{display:flex;flex-direction:column;gap:clamp(18px,3vw,30px);}
+  .hero-splash{position:relative;}
+  .hero-splash img{width:100%;height:clamp(240px,40vw,400px);object-fit:cover;object-position:center 32%;display:block;filter:grayscale(1) sepia(0.12);}
+  .title-box{position:absolute;left:clamp(14px,4vw,40px);bottom:clamp(14px,4vw,36px);background:var(--paper);border:2.5px solid var(--ink);padding:clamp(16px,2.6vw,26px) clamp(18px,3vw,32px);max-width:min(92%,580px);}
+  .title-box h1{font-size:clamp(38px,7vw,72px);margin:12px 0 0;}
+  .title-box .last{color:var(--ink-soft);font-style:italic;font-weight:500;}
+  .thesis{font-family:var(--serif);font-size:clamp(17px,2.2vw,23px);font-style:italic;font-weight:400;margin:14px 0 0;max-width:38ch;line-height:1.3;}
+
+  .hero-row{display:grid;grid-template-columns:1.42fr 0.85fr;gap:clamp(18px,3vw,30px);align-items:stretch;}
+  .hero-intro p{margin:16px 0 0;color:var(--ink-soft);max-width:50ch;}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;}
+  .btn{font-family:var(--mono);font-size:13px;letter-spacing:0.03em;padding:11px 18px;border:2px solid var(--ink);color:var(--ink);background:var(--panel);transition:all .15s ease;}
+  .btn:hover{background:var(--ink);color:#fff;text-decoration:none;}
+  .btn.alt:hover{background:var(--accent);border-color:var(--accent);}
+  .portrait{min-height:260px;}
+  .portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:contrast(1.02) saturate(1.04);}
+  .portrait .tag-id{position:absolute;left:8px;bottom:8px;z-index:2;font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;background:var(--paper);border:1.5px solid var(--ink);padding:2px 8px;}
+
+  /* section headers */
+  .sec-head{margin-bottom:30px;}
+  .sec-head h2{font-size:clamp(27px,4.2vw,38px);margin:14px 0 0;}
+  .sec-head p.lede{color:var(--ink-soft);margin:13px 0 0;max-width:64ch;}
+  .sec-head p.lede a{text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1.5px;}
+
+  /* research cards as sub-panels */
+  .themes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .card{border:2px solid var(--ink);background:var(--panel);padding:22px 20px;transition:transform .15s ease;}
+  .card:hover{transform:translate(-2px,-2px);}
+  .card .num{font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:0.08em;}
+  .card h3{font-size:19px;margin:9px 0 8px;}
+  .card p{font-size:14.5px;color:var(--ink-soft);margin:0;line-height:1.55;}
+  .methods{margin-top:24px;font-size:15.5px;color:var(--ink-soft);max-width:64ch;}
+
+  /* writing */
+  .callout{font-size:15.5px;color:var(--ink-soft);margin:0 0 6px;}
+  .work{display:grid;grid-template-columns:1fr;}
+  .work-item{display:grid;grid-template-columns:115px 1fr;gap:22px;padding:18px 0;border-top:1.5px solid var(--line);}
+  .work-item:last-child{border-bottom:1.5px solid var(--line);}
+  .work-item .meta{font-family:var(--mono);font-size:12px;color:var(--ink-faint);padding-top:5px;}
+  .work-item h3{font-size:18px;margin:0 0 4px;font-weight:600;line-height:1.25;}
+  .work-item .venue{font-size:13.5px;color:var(--ink-soft);}
+  .lnk{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;padding:2px 8px;border:1.5px solid var(--ink);color:var(--ink);margin-left:6px;vertical-align:middle;}
+  .lnk:hover{background:var(--accent);border-color:var(--accent);color:var(--ink);text-decoration:none;}
+  .lnk.todo{border-color:var(--accent);color:var(--accent);}
+
+  /* background */
+  .subhead{font-family:var(--mono);font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-faint);margin:38px 0 6px;}
+  .subhead:first-child{margin-top:0;}
+  .edu{display:grid;grid-template-columns:150px 1fr;gap:22px;padding:15px 0;border-top:1.5px solid var(--line);}
+  .edu:last-child{border-bottom:1.5px solid var(--line);}
+  .edu .yr{font-family:var(--mono);font-size:12.5px;color:var(--ink-soft);padding-top:3px;}
+  .edu h3{font-size:17px;margin:0;font-weight:600;}
+  .edu .inst{font-size:14px;color:var(--ink-soft);margin-top:2px;}
+  .edu .note{font-size:13px;color:var(--ink-faint);margin-top:3px;}
+  .honors{margin-top:8px;font-size:15px;color:var(--ink-soft);max-width:66ch;line-height:1.7;}
+
+  /* beyond */
+  .beyond-grid{display:grid;grid-template-columns:0.6fr 1fr;gap:clamp(20px,3vw,34px);align-items:center;}
+  .beyond-grid .frame{min-height:200px;}
+  .beyond-grid .frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) sepia(0.12) contrast(1.03);}
+  .beyond-grid p{margin:0 0 12px;color:var(--ink-soft);}
+  .beyond-grid p:last-child{margin-bottom:0;}
+
+  /* contact */
+  .contact-grid{display:flex;flex-wrap:wrap;gap:13px 34px;margin-top:16px;font-family:var(--mono);font-size:14px;}
+  .contact-grid .k{color:var(--ink-faint);margin-right:8px;}
+
+  footer{max-width:var(--maxw);margin:clamp(20px,3vw,30px) auto 0;padding:26px var(--pad) 46px;border-top:2.5px solid var(--ink);}
+  .foot-inner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;font-family:var(--mono);font-size:12px;color:var(--ink-faint);}
+  .foot-inner .wink{color:var(--accent);}
+
+  .fn{font-family:var(--mono);font-size:12.5px;color:var(--ink-faint);border-left:2px solid var(--accent);padding-left:14px;margin-top:28px;max-width:60ch;line-height:1.6;}
+  .fn b{color:var(--accent);font-weight:400;}
+
+  @media (max-width:820px){
+    .hero-row{grid-template-columns:1fr;}
+    .portrait{min-height:340px;}
+    .themes{grid-template-columns:1fr;}
+    .beyond-grid{grid-template-columns:1fr;}
+    .beyond-grid .frame{min-height:200px;order:2;}
+    .nav-links{gap:14px;font-size:12px;}
+  }
+  @media (max-width:560px){
+    body{font-size:16px;}
+    .nav-links a:not(.contact-link){display:none;}
+    .work-item{grid-template-columns:1fr;gap:4px;}
+    .work-item .meta{padding-top:0;}
+    .edu{grid-template-columns:1fr;gap:3px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .card:hover{transform:none;}
+    *{animation:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <span class="brand">Alejandro Roemer</span>
+    <div class="nav-links">
+      <a href="#research">Research</a>
+      <a href="#writing">Writing</a>
+      <a href="#background">Background</a>
+      <a href="#contact" class="contact-link">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <header class="hero">
+    <div class="frame hero-splash">
+      <img src="art_hero.jpg" alt="Manga-style illustration of a clock tower over a city skyline" />
+      <div class="title-box">
+        <span class="cap"><span class="dot">●</span>&nbsp; Political Science · University of Chicago</span>
+        <h1>Alejandro <span class="last">Roemer</span></h1>
+        <p class="thesis">Why do governments facing criminal violence take on the political cost of reform?</p>
+      </div>
+    </div>
+
+    <div class="hero-row">
+      <div class="panel hero-intro">
+        <span class="cap">Profile</span>
+        <p>I'm a PhD student in Political Science at the University of Chicago, working in comparative politics. I am interested in why and when governments confronting high-intensity criminal violence undertake costly political reforms such as creating independent prosecution offices. I also study how armed conflict is classified under international law, and the parallels between the War on Terror and the War on Drugs. I have a background in international law and public policy, and an interest in behavioral science.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#research">Read the research →</a>
+          <a class="btn alt" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="frame portrait">
+        <img src="Roemer_Alejandro.jpg" alt="Portrait of Alejandro Roemer" />
+        <span class="tag-id">fig. 1</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="panel" id="research">
+    <div class="band"><img src="art_research.jpg" alt="Manga-style illustration of a city skyline framed by foliage" /></div>
+    <div class="sec-head">
+      <span class="cap"><span class="dot">●</span>&nbsp; What I study</span>
+      <h2>Criminal violence, the state, and the cost of reform</h2>
+      <p class="lede">My work sits at the intersection of comparative politics and the law of armed conflict. I ask what happens to states' institutions, their use of force, and their politics when they confront entrenched criminal violence, with Latin America at the center of the inquiry.</p>
+    </div>
+    <div class="themes">
+      <div class="card">
+        <span class="num">01</span>
+        <h3>Reform under violence</h3>
+        <p>Why and when governments facing intense criminal violence take on costly reforms — independent prosecutors, fiscal and financial controls — that carry real political risk.</p>
+      </div>
+      <div class="card">
+        <span class="num">02</span>
+        <h3>The use of force</h3>
+        <p>How states regulate the use of force in the fight against organized crime in Latin America, and where law strains against the realities of security policy.</p>
+      </div>
+      <div class="card">
+        <span class="num">03</span>
+        <h3>Conflict &amp; international law</h3>
+        <p>How armed conflict is classified under international law — and the uneasy parallels between the War on Terror and the War on Drugs.</p>
+      </div>
+    </div>
+    <p class="methods">My approach is comparative and historical, grounded in fieldwork, archival research, and close attention to how legal and political institutions actually change.</p>
+    <p class="fn"><b>&dagger;</b> This site grows alongside the dissertation. Expect the research section to sharpen as the project takes shape.</p>
+  </section>
+
+  <section class="panel" id="writing">
+    <div class="band"><img src="art_writing.jpg" alt="Manga-style illustration of an open notebook, pen, coffee, and stacked books" /></div>
+    <div class="sec-head">
+      <span class="cap"><span class="dot">●</span>&nbsp; Writing</span>
+      <h2>Selected writing</h2>
+      <p class="lede">Essays and analysis for public audiences, in English and in Spanish. I have written on drug policy, the rule of law, the use of force, and the politics of the Americas. I also enjoy writing about philosophy and policymaking through cartoons and popular culture — check out my pieces on <a href="https://aleroemer.medium.com/stoicism-existentialism-and-the-lion-king-simbas-journey-7c7fbfb538b" target="_blank" rel="noopener">Stoicism and Existentialism in the Lion King</a>, <a href="https://aleroemer.medium.com/seneca-sobre-la-meritocracia-5d34d57203bf" target="_blank" rel="noopener">Seneca on Meritocracy</a>, <a href="https://www.perpetuo.global/p/los-miserables-y-el-sistema-penitenciario" target="_blank" rel="noopener">Victor Hugo on Guilt and Redemption</a>, and <a href="https://aleroemer.medium.com/if-descartes-were-a-millennial-on-avoiding-avoidance-1689fc61d92d" target="_blank" rel="noopener">Descartes as a Millennial</a>.</p>
+      <p class="callout" style="margin-top:14px;">Ongoing analysis lives on my <a href="https://alejandroroemer.substack.com/" target="_blank" rel="noopener" style="text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px;">Substack &#8599;</a></p>
+    </div>
+    <div class="work">
+      <div class="work-item">
+        <div class="meta">2025</div>
+        <div>
+          <h3>Ghosts of the War on Terror: Perils and Promise in US Drug Policy for Latin America <a class="lnk" href="https://oxfordpoliticalreview.com/2025/06/26/ghosts-of-the-war-on-terror-perils-and-promise-in-us-drug-policy-for-latin-america/" target="_blank" rel="noopener">read &#8599;</a></h3>
+          <div class="venue">Oxford Political Review</div>
+        </div>
+      </div>
+      <div class="work-item">
+        <div class="meta">2025</div>
+        <div>
+          <h3>OPR Speaks with Former President of Colombia, Iván Duque <a class="lnk" href="https://oxfordpoliticalreview.com/2025/05/25/opr-speaks-with-former-president-of-colombia-ivan-duque/" target="_blank" rel="noopener">read &#8599;</a></h3>
+          <div class="venue">Oxford Political Review · with Michael Wakin</div>
+        </div>
+      </div>
+      <div class="work-item">
+        <div class="meta">2025</div>
+        <div>
+          <h3>El acierto de Trump: la "alianza intolerable" entre el gobierno mexicano y el crimen organizado <a class="lnk" href="https://www.perpetuo.global/p/el-acierto-de-trump" target="_blank" rel="noopener">read &#8599;</a></h3>
+          <div class="venue">Perpetuo</div>
+        </div>
+      </div>
+      <div class="work-item">
+        <div class="meta">2024</div>
+        <div>
+          <h3>Researchers: ShotSpotter helps gunshot victims receive rapid first aid. Does that change the debate? <a class="lnk" href="https://crimelab.uchicago.edu/2024/09/researchers-shotspotter-helps-gunshot-victims-receive-rapid-first-aid-does-that-change-the-debate/" target="_blank" rel="noopener">read &#8599;</a></h3>
+          <div class="venue">Chicago Tribune · with J. Ludwig, J. Lopez &amp; H. Josephson</div>
+        </div>
+      </div>
+      <div class="work-item">
+        <div class="meta">2022</div>
+        <div>
+          <h3>Russia, Ukraine, and International Law: the return to wars of conquest <a class="lnk" href="https://medium.com/discourse/why-you-should-care-about-international-law-russia-and-the-return-to-wars-of-conquest-a9125678d9d9" target="_blank" rel="noopener">read &#8599;</a></h3>
+          <div class="venue">Dialogue &amp; Discourse</div>
+        </div>
+      </div>
+      <div class="work-item">
+        <div class="meta">2021</div>
+        <div>
+          <h3>The Latin American Monument Debate: Reckoning with the Region's Colonial Past <a class="lnk" href="https://latinamericanpolicyreview.com/2021/03/08/the-latin-american-monument-debate-reckoning-with-the-regions-colonial-past/" target="_blank" rel="noopener">read &#8599;</a></h3>
+          <div class="venue">Latin American Policy Review</div>
+        </div>
+      </div>
+      <div class="work-item">
+        <div class="meta">2020</div>
+        <div>
+          <h3>Idealismo apático: marca generacional <a class="lnk" href="https://cultura.nexos.com.mx/idealismo-apatico-marca-generacional/" target="_blank" rel="noopener">read &#8599;</a></h3>
+          <div class="venue">Nexos</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="background">
+    <div class="band"><img src="art_background.jpg" alt="Manga-style illustration of library bookshelves by a window" /></div>
+    <div class="sec-head">
+      <span class="cap"><span class="dot">●</span>&nbsp; Background</span>
+      <h2>Education &amp; experience</h2>
+    </div>
+
+    <div class="subhead">Education</div>
+    <div>
+      <div class="edu"><div class="yr">2025 – present</div><div><h3>PhD, Political Science</h3><div class="inst">University of Chicago</div></div></div>
+      <div class="edu"><div class="yr">2020 – 2023</div><div><h3>Master of Public Policy</h3><div class="inst">University of Chicago — Harris School of Public Policy</div><div class="note">Co-founder &amp; Editor-in-Chief, Latin American Policy Review</div></div></div>
+      <div class="edu"><div class="yr">2016 – 2018</div><div><h3>MA, Human Rights &amp; Humanitarian Action</h3><div class="inst">Sciences Po, Paris</div><div class="note">Summa cum laude (top 2%)</div></div></div>
+      <div class="edu"><div class="yr">2013 – 2016</div><div><h3>BA, International Relations</h3><div class="inst">ITAM, Mexico City</div><div class="note">EX ITAM Research Award — best thesis in International Relations</div></div></div>
+    </div>
+
+    <div class="subhead">Experience</div>
+    <div>
+      <div class="edu"><div class="yr">2023 – 2025</div><div><h3>Senior Research Fellow</h3><div class="inst">University of Chicago Crime Lab</div></div></div>
+      <div class="edu"><div class="yr">2021 – 2022</div><div><h3>Research Assistant, University of Chicago</h3><div class="inst">Prof. Benjamin Lessing (criminal governance) &amp; Prof. Tom Ginsburg (comparative constitutions)</div></div></div>
+      <div class="edu"><div class="yr">2018 – 2020</div><div><h3>Lecturer in International Humanitarian Law</h3><div class="inst">Universidad Panamericana &amp; ITAM, Mexico City</div></div></div>
+      <div class="edu"><div class="yr">2018 – 2020</div><div><h3>Deputy Director, Analytics &amp; Behavioral Economics</h3><div class="inst">Banorte</div></div></div>
+    </div>
+
+    <div class="subhead">Selected honors</div>
+    <p class="honors">International House Fellow, University of Chicago (2025–26) · Pearson Institute Fellow, University of Chicago · Merit Scholarship, Master of Public Policy, University of Chicago · Premio de Investigación Ex-ITAM.</p>
+
+    <p class="fn"><b>&dagger;</b> The full CV — teaching, research assistantships, and the complete list of writing — is linked below.</p>
+  </section>
+
+  <section class="panel" id="beyond">
+    <div class="sec-head">
+      <span class="cap"><span class="dot">●</span>&nbsp; Off the clock</span>
+      <h2>Beyond the research</h2>
+    </div>
+    <div class="beyond-grid">
+      <div class="frame"><img src="art_beyond.jpg" alt="Manga-style illustration of a desk with a lamp and books" /></div>
+      <div>
+        <p>When I'm not reading about prosecutors and the use of force, I play recreational soccer, watch (and over-analyze) anime, and am slowly teaching myself guitar and songwriting.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="contact">
+    <div class="sec-head">
+      <span class="cap"><span class="dot">●</span>&nbsp; Contact</span>
+      <h2>Get in touch</h2>
+      <p class="lede">Happy to hear from students, collaborators, and anyone working on similar questions.</p>
+    </div>
+    <div class="contact-grid">
+      <span><span class="k">email</span><a href="mailto:aleroemer@uchicago.edu">aleroemer@uchicago.edu</a></span>
+      <span><span class="k">cv</span><a href="Roemer_CV.pdf" target="_blank" rel="noopener">PDF</a></span>
+      <span><span class="k">substack</span><a href="https://alejandroroemer.substack.com/" target="_blank" rel="noopener">alejandroroemer</a></span>
+      <span><span class="k">medium</span><a href="https://aleroemer.medium.com" target="_blank" rel="noopener">@aleroemer</a></span>
+      <span><span class="k">x</span><a href="https://x.com/aleroemer" target="_blank" rel="noopener">@aleroemer</a></span>
+      <span><span class="k">linkedin</span><a href="#">profile</a></span>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <span>© 2026 Alejandro Roemer · Chicago</span>
+    <span class="wink">Hecho en Chicago</span>
+    <span>Last updated June 2026 · more as the PhD unfolds</span>
+  </div>
+</footer>
+
+</body>
+</html>
